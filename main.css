@@ -1,11 +1,19 @@
-#blueBlock{
-    width: 400px;
-    height: 150px;
-    background-color:#3498db;
+ #blueBlock{
+    width: 50%;
+    height: 200px;
+    /* background-color:#3498db; */
     color:antiquewhite;
 }
 
-.divLeft{
+#image{  
+    float: left;
+    /* margin: 2px; */
+    /* padding-left: 20px;
+    padding-top: 2px; */
+    filter: brightness(0) invert(1);
+}
+
+/* .divLeft{
     float: left;
     text-align: left;
 }
@@ -33,7 +41,7 @@
 .img{
     opacity: 0.5;
     background-color:#3498db; 
-}
+} */
 
 #input_address{
     width: 400px;
