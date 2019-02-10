@@ -34,3 +34,7 @@
     opacity: 0.5;
     background-color:#3498db; 
 }
+
+#input_address{
+    width: 400px;
+}
