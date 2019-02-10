@@ -1,0 +1,36 @@
+#blueBlock{
+    width: 400px;
+    height: 150px;
+    background-color:#3498db;
+    color:antiquewhite;
+}
+
+.divLeft{
+    float: left;
+    text-align: left;
+}
+
+.divRight{
+    float:right;
+    text-align: right;
+}
+
+.text-centre{
+    text-align: center;
+}
+
+.row{
+    margin: 10px 50px 20px 0;
+}
+
+.globe{
+    color: #fff;
+    float: left;
+    font-size: 50px;
+    margin: 0 20px 20px 0;
+}
+
+.img{
+    opacity: 0.5;
+    background-color:#3498db; 
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="blueBlock">
+        <div class="row text-centre">
+            <!-- <img src="image/globe.jpg"> -->
+            <span id="marketCap">MARKET CAP</span>
+            <br>
+            <span id="price">PRICE of Ether</span>
+            <span id="percentage"></span> 
+        </div>
+
+
+        <!-- <div class="row margin-bottom-20">
+            <div class="col-xs-6 service-in">
+            <small><a href="blocks" rel="tooltip" data-placement="right" title="" data-original-title="View List of Blocks"><font color="white">Last Block</font></a></small>
+                <h4 style="color: #FFFFFF"><span id="ContentPlaceHolder1_LitLastBlock" style="font-size:Larger;"><a href="blocks" rel="tooltip" data-placement="bottom" title="" data-original-title="The Lastest Block No"><font color="white"><span id="lastblock" style="display: inline;">7186897</span></font></a></span>
+                <span class="hidden-xs" rel="tooltip" data-placement="right" title="" data-original-title="Average Block Time (The Lastest 5000 Block)"><font size="2" style="font-weight:350"> (<span id="avgblocktime">17.6s</span>)</font></span></h4>
+            </div>
+            <div class="col-xs-6 text-right service-in">
+                <small><a href="txs" rel="tooltip" data-placement="left" title="" data-original-title="View List of Transactions"><font color="white"><span class="hidden-su-xs">Transactions</span><span class="visible-su-xs">TXNS</span></font></a></small>
+                <h4><span id="transactions"><a href="/txs" rel="tooltip" data-placement="left" title="" data-original-title="Total Transactions Counter<br>(Update Every 5 mins)"><font color="white">388.13 M</font></a><span class="hidden-xs" rel="tooltip" data-placement="bottom" title="" data-original-title="Txns per second"><font size="2" style="font-weight:350"> (4.9 TPS)</font></span></span></h4>
+            </div>
+        </div> -->
+
+
+    <div class="row">
+        <div class="divLeft">Last Block
+            <br>
+            <span id="lastBlock"></span>
+        </div>
+        <div class="divRight">Transactions
+            <br>
+            <span id="transactions">388 M</span>
+        </div>
+        <br>
+    </div>
+
+    <div class="row">
+        <div class="divLeft">Hash Rate
+            <br>
+            <span id="hashRate">2222222</span>
+        </div>
+        <div class="divRight">Network Difficulty
+            <br>
+            <span id="networkDifficulty">2000 TH</span>
+        </div>
+        <br>
+    </div>
+    </div>
+
+    <div id="getTrax">
+        <form id="getTraxForm" onsubmit="showTransactions()">
+            <!-- Get all transactions done by Address: -->
+            <input type="text" name="address" placeholder="Enter Address">
+            <input type="submit" value="Show me transactions">
+            <button type="button" value="Clear Transactions"></button>
+        </form>
+        <br>
+        <span id="numTrax"></span> 
+        <span id="Trax"></span> 
+    </div>
+
+</body>
+</html>
