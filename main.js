@@ -13,17 +13,6 @@ const updateData = function(){
     console.log(apiKey);
     console.log(apiBlockNum);
 
-    // fetch(apiBlockNum)
-    // .then(function(response) {
-    //     return response.json();
-    //   })
-    //   .then(function(myJson) {
-    //         console.log(myJson);
-    //         var blockNumber = myJson.result.blockNumber;
-    //         console.log(blockNumber);
-    //         $("#lastBlock").text(blockNumber);
-    //   });
-
       fetch(apiLastBlockNum)
       .then(function(response) {
           return response.json();
@@ -71,31 +60,31 @@ const updateData = function(){
               });
         })
 
-      //   const addressInput = document.forms['getTraxForm'].querySelector('input');
-      //   //const clearBtn = document.getElementById(clearBtn);
-      //   addressInput.addEventListener('keyup',(addressValue) => {
-      //       console.log("Address is - "+addressValue.target.value);
-      //       apiAddress = "http://api.etherscan.io/api?module=account&action=txlist&address="+addressValue.target.value+"&startblock=0&endblock=99999999&sort=asc"+ apiKey;
+        const addressInput = $("input[name=address]");
+        addressInput.change((addressValue) => {
+            console.log("Address is - "+addressValue.target.value);
+            apiAddress = "http://api.etherscan.io/api?module=account&action=txlist&address="+addressValue.target.value+"&startblock=0&endblock=99999999&sort=asc"+ apiKey;
 
-      //       fetch(apiAddress)
-      //       .then(function(response) {
-      //          return response.json();
-      //        })
-      //        .then(function(myJson) {
-      //              console.log(myJson);
-      //              if (myJson.message == "OK"){
-      //                   var numTrax = myJson.result.length;
-      //                   console.log(numTrax);
-      //                   $("#numTrax").text(`You have ${numTrax} transactions`);
-      //                   $("#Trax").text(JSON.stringify(myJson.result));
-      //              } else {
-      //                   $("#numTrax").text(`Invalid address.`);
-      //              }
-      //        });
-      //   })
+            fetch(apiAddress)
+            .then(function(response) {
+               return response.json();
+             })
+             .then(function(myJson) {
+                   console.log(myJson);
+                   if (myJson.message == "OK"){
+                        var numTrax = myJson.result.length;
+                        console.log(numTrax);
+                        $("#numTrax").text(`You have ${numTrax} transactions`);
+                        $("#Trax").text(JSON.stringify(myJson.result));
+                   } else {
+                        $("#numTrax").text(`Invalid address.`);
+                        $("#Trax").text(" ");
+                   }
+             });
+        })
 }
 
-var prevPriceUsd = 119;
+var prevPriceUsd = 0;
 
 window.onload = updateData();
 
