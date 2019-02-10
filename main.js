@@ -94,7 +94,7 @@ async function fetchDifficultyHash(){
   }
 }
 
-// display ALL Transactions related to the Entered Address
+// display ALL Transactions received by the Entered Address
 async function fetchAddress(){
   addressValue = addressInput.val();
   console.log("Address is - "+addressValue);
@@ -102,7 +102,7 @@ async function fetchAddress(){
     try{
     const response_Address = await fetch(apiAddress);
     const json_Address = await response_Address.json();
-    // console.log(json_Address);
+    console.log(json_Address);
     if (json_Address.message == "OK"){
         var numTrax = json_Address.result.length;
         console.log("Number of Transactions - "+numTrax);
